@@ -1,8 +1,22 @@
 {
   "name": "react-redux-saga",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
+  "scripts": {
+    "copy": "copyfiles -f client/build/**/*.* public",
+    "client": "cd client && yarn build:ts && cd .. && yarn run copy",
+    "dev": "yarn run client && nodemon server.js",
+    "server": "nodemon server.js"
+  },
   "repository": "git@github.com:LexaDel/react-redux-saga.git",
   "author": "Alexey Delezhov <lexadelejov@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0"
+  }
 }
