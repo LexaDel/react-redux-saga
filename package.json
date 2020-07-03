@@ -1,0 +1,8 @@
+{
+  "name": "react-redux-saga",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:LexaDel/react-redux-saga.git",
+  "author": "Alexey Delezhov <lexadelejov@gmail.com>",
+  "license": "MIT"
+}
