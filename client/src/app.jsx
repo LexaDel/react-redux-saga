@@ -7,6 +7,7 @@ class App extends React.Component {
     componentDidMount() {
         this.props.fetchTodos();
     }
+    
     render() {
         const { todos } = this.props;
         if (todos && todos.length) {

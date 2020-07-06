@@ -1,10 +1,27 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { deleteTodo } from '../redux/actions';
 
-export default class Todo extends React.Component {
+class Todo extends React.Component {
     render() {
-        const { todo } = this.props;
+        const { todo, deleteTodo } = this.props;
         return (
-            <li>{todo.title}</li>
+            <li>
+                {todo.title} 
+                <span>
+                    <button
+                        onClick={() => { deleteTodo(todo.id) }}
+                    >
+                        Удалить
+                    </button>
+                </span>
+            </li>
         )
     }
 }
+
+const mapDispatchToProps = {
+    deleteTodo: deleteTodo
+}
+
+export default connect(null, mapDispatchToProps)(Todo);
