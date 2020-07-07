@@ -6,8 +6,8 @@ class Todo extends React.Component {
     render() {
         const { todo, deleteTodo } = this.props;
         return (
-            <li>
-                {todo.title} 
+            <>
+                <span className='todo-title'>{todo.title}</span>
                 <span>
                     <button
                         onClick={() => { deleteTodo(todo.id) }}
@@ -15,8 +15,7 @@ class Todo extends React.Component {
                         Удалить
                     </button>
                 </span>
-            </li>
-        )
+            </>        )
     }
 }
 
